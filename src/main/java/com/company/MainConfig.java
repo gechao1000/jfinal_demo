@@ -16,7 +16,17 @@ public class MainConfig extends JFinalConfig {
     }
 
     @Override
-    public void configConstant(Constants me) {}
+    public void configConstant(Constants me) {
+        // JFinal会对每次请求输出报告，如输出本次请求的URL、Controller、Method以及请求所携带的参数
+        me.setDevMode(true);
+
+        // 文件下载
+        me.setBaseDownloadPath("E:/Z_Export");
+
+        // 支持 Controller、Interceptor、Validator 之中使用 @Inject 注入业务层，并且自动实现 AOP
+        // 注入动作支持任意深度并自动处理循环注入
+        me.setInjectDependency(true);
+    }
 
     @Override
     public void configRoute(Routes me) {
