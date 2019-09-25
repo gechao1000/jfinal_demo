@@ -1,0 +1,15 @@
+<configuration>
+  <id>club</id>
+  <name>jfinal club</name>
+  <description>jfinal club</description>
+  <env name="MAIN_CLASS" value="com.company.MainConfig"/>
+  <env name="JAVA_OPTS" value="-Xms256m -Xmx1024m"/>
+  <env name="CP" value="%BASE%\config;%BASE%\lib\*" />
+  <executable>D:\dev\Java\jdk1.8.0_221\bin\java</executable>
+  <arguments>-Xverify:none %JAVA_OPTS% -cp %CP% %MAIN_CLASS%</arguments>
+  <logpath>%BASE%\log</logpath>
+  <log mode="roll-by-size">
+    <sizeThreshold>10240</sizeThreshold>
+    <keepFiles>4</keepFiles>
+  </log>
+</configuration>
