@@ -40,7 +40,8 @@ public class MainConfig extends JFinalConfig {
     @Override
     public void configPlugin(Plugins me) {
         DruidPlugin dp = new DruidPlugin(
-                "jdbc:mysql://192.168.113.128:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false",
+//                "jdbc:mysql://192.168.80.128:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false",
+                "jdbc:mysql://192.168.80.128:3306/test",
                 "root",
                 "123456",
                 "com.mysql.cj.jdbc.Driver");
